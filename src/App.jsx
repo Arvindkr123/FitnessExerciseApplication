@@ -5,6 +5,7 @@ import { Box } from "@mui/material";
 import Home from "./pages/Home";
 import ExerciseDetails from "./pages/ExerciseDetails.jsx";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer.jsx";
 const App = () => {
   return (
     <Box>
@@ -13,6 +14,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/exercise/:id" element={<ExerciseDetails />} />
       </Routes>
+      <Footer />
     </Box>
   );
 };
