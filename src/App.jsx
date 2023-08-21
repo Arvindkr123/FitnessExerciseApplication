@@ -1,7 +1,20 @@
 import React from "react";
-import './App.css'
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import { Box } from "@mui/material";
+import Home from "./pages/Home";
+import ExerciseDetails from "./pages/ExerciseDetails.jsx";
+import Navbar from "./components/Navbar";
 const App = () => {
-  return <div>Hello World!!</div>;
+  return (
+    <Box>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/exercise/:id" element={<ExerciseDetails />} />
+      </Routes>
+    </Box>
+  );
 };
 
 export default App;
